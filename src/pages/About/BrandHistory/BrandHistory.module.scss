@@ -1,0 +1,101 @@
+.brand-history-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.time-lock {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 35px 0px;
+    span {
+        margin-bottom: 35px;
+        font-size: 5.8rem;
+        font-family: iCielProza, sans-serif;
+        color: #d8d8d8;
+        transition: transform 0.2s ease-out;
+        cursor: pointer;
+    }
+    span.active {
+        color: var(--main-site-bakground);
+    }
+}
+.up-btn {
+    position: absolute;
+    top: -15%;
+    transform: rotate(90deg);
+    background-size: cover;
+    img {
+        width: 11px;
+        height: 19px;
+    }
+}
+.down-btn {
+    position: absolute;
+    bottom: -15%;
+    transform: rotate(-90deg);
+    background-size: cover;
+    img {
+        width: 11px;
+        height: 19px;
+    }
+}
+.time-event {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-site-bakground);
+    h4 {
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    h5 {
+        margin-top: 23px;
+        margin-bottom: 30px;
+        font-family: iCielProza, sans-serif;
+        font-size: 2rem;
+    }
+}
+.event-content-wrapper {
+    position: relative;
+    p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        color: var(--main-text-color);
+    }
+    p.active {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .brand-history-wrapper {
+        justify-content: space-between;
+    }
+    .time-lock {
+        width: 20%;
+    }
+    .time-event {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .brand-history-wrapper {
+        column-gap: 20px;
+        justify-content: unset;
+    }
+    .time-lock {
+        width: 30%;
+        span {
+            font-size: 4rem;
+        }
+    }
+    .event-content-wrapper {
+        font-size: 1.4rem;
+    }
+}

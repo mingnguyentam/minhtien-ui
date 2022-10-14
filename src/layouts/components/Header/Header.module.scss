@@ -1,0 +1,193 @@
+.header-wrapper {
+    position: relative;
+    width: 100%;
+}
+.menu-wrapper {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 39px 0px 10px 0px;
+    width: 100%;
+    background-color: transparent;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 38px;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        height: 1px;
+        background-color: var(--main-light-color);
+        z-index: 1;
+    }
+}
+.menu-btn {
+    display: none;
+}
+.logo {
+    width: 130px;
+    margin-left: 116px;
+}
+.navbar {
+    height: 57px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    border-bottom: var(--main-border-style);
+    font-size: 1.6rem;
+    color: var(--main-light-color);
+    .nav-list {
+        display: flex;
+        flex: 2;
+        margin-right: 80px;
+        :last-child {
+            border-right: none;
+        }
+    }
+    .nav-item {
+        margin-top: 10px;
+        border-right: var(--main-border-style);
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: inherit;
+    }
+}
+.nav-link {
+    display: block;
+    padding: 6px 0px 0px;
+    text-decoration: none;
+}
+.sub-menu-tablet-list {
+    display: none;
+}
+.sub-menu-wrapper {
+    position: absolute;
+    display: block;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 443px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--main-light-color);
+    transition: height 0.5s linear, opacity 0.2s ease-in;
+}
+.sub-menu-item {
+    margin: 185px 0 40px 328px;
+    display: none;
+    opacity: 0;
+}
+.sub-menu-item.active {
+    display: block;
+}
+.sub-menu-title {
+    padding-bottom: 25px;
+    font-size: 4rem;
+    font-family: iCielProza, sans-serif;
+    color: var(--main-light-color);
+    cursor: default;
+}
+.sub-menu-list {
+    li {
+        padding-left: 52px;
+        margin-bottom: 10px;
+    }
+}
+.sub-menu-link {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+    &:hover {
+        font-weight: 400;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header-wrapper {
+        padding: 15px 0 19px;
+    }
+    .menu-wrapper {
+        padding: 0;
+        &::before {
+            display: none;
+        }
+    }
+    .menu-btn {
+        display: block;
+        margin-left: 24px;
+        padding: 15px;
+        position: relative;
+        z-index: 100;
+        background-color: transparent;
+        img {
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .bar.active {
+        display: none;
+    }
+    .xmark {
+        display: none;
+    }
+    .xmark.active {
+        display: block;
+    }
+    .logo {
+        position: absolute;
+        z-index: 100;
+        width: 88px;
+        height: auto;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0px;
+    }
+    .navbar {
+        position: fixed;
+        top: -15px;
+        left: 0;
+        width: 400px;
+        background-color: #ffffff;
+        margin: 0;
+        padding-top: 100px;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform linear 0.2s;
+        .nav-list {
+            display: block;
+            padding: 0 20px;
+            margin: 0px;
+            background-color: #ffffff;
+        }
+        .nav-item {
+            border-right: none;
+            text-align: left;
+            border-top: 1px solid var(--main-light-color);
+            padding: 35px 25px 35px;
+            color: var(--main-site-bakground);
+            margin: 0;
+        }
+    }
+    .navbar.active {
+        transform: translateX(0);
+    }
+    .sub-menu-tablet-list {
+        padding-top: 30px;
+        li {
+            padding: 5px 0px 5px 15px;
+        }
+    }
+    .sub-menu-tablet-list.active {
+        display: block;
+    }
+    .sub-menu-wrapper {
+        display: none;
+    }
+}

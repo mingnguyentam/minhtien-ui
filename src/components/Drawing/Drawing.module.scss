@@ -1,0 +1,29 @@
+svg {
+    max-height: calc(960px + 30vh);
+    overflow: visible;
+}
+
+.home-path {
+    fill: none;
+    stroke: #b9b084;
+    stroke-width: 3;
+    stroke-miterlimit: 8;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}
+.about-path {
+    fill: none;
+    stroke: #529b64;
+    stroke-width: 1;
+    stroke-miterlimit: 8;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}
+.sustainability-path {
+    fill: none;
+    stroke: rgb(208, 208, 207);
+    stroke-miterlimit: 10;
+    stroke-width: 0.5px;
+    stroke-dasharray: 1521.99px;
+    stroke-dashoffset: 0px;
+    opacity: 1;
+    transition: stroke-dashoffset 0.5s ease 0s;
+}

@@ -1,0 +1,111 @@
+.core-value-wrapper {
+    padding: 170px 140px 160px 220px;
+}
+.core-value-nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 100%;
+    p {
+        width: calc(33.33333% - 60px);
+    }
+    ul {
+        width: calc(66.66667% - 60px);
+        display: flex;
+
+        li {
+            opacity: 0.2;
+            font-size: 3.6rem;
+            color: var(--main-light-color);
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 32px;
+            transition: all 0.4s ease;
+            margin: 0 50px 30px 0;
+        }
+        li.active {
+            opacity: 1;
+        }
+    }
+}
+.core-value-content {
+    position: relative;
+}
+.core-value-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+.core-value-item.active {
+    opacity: 1;
+}
+.core-value-media {
+    display: flex;
+    justify-content: space-between;
+}
+.core-value-img {
+    width: calc(33.33333% - 60px);
+    img {
+        width: 160px;
+        margin: 0 auto 30px;
+        display: block;
+    }
+}
+.core-value-slogan {
+    width: calc(66.66667% - 60px);
+    margin-bottom: 70px;
+    font-size: 2rem;
+    text-align: left;
+    color: var(--main-light-color);
+}
+.core-value-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10%;
+}
+article {
+    margin-bottom: 50px;
+    text-align: left;
+    h5 {
+        font-size: 2rem;
+        font-family: iCielProza, sans-serif;
+        text-transform: uppercase;
+        color: var(--main-light-color);
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .core-value-wrapper {
+        padding: 50px 70px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .core-value-wrapper {
+        padding: 20px;
+    }
+    .core-value-nav {
+        flex-direction: column;
+        p {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        ul {
+            width: 100%;
+        }
+    }
+    .core-value-media {
+        flex-direction: column;
+    }
+    .core-value-img {
+        width: 100%;
+    }
+    .core-value-slogan {
+        width: 100%;
+    }
+    .core-value-tab {
+        grid-template-columns: 1fr;
+    }
+}

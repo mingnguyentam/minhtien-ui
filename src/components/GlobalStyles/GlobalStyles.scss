@@ -1,0 +1,236 @@
+@import 'normalize.css';
+// Fonts emmbeded
+@font-face {
+    font-family: iCielIdealSans;
+    src: url('/assets/fonts/iCielIdealSans-Medium.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: iCielIdealSans;
+    src: url('/assets/fonts/iCielIdealSans-Book.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: iCielIdealSans;
+    src: url('/assets/fonts/iCielIdealSans-Semibold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: iCielProza;
+    src: url('/assets/fonts/iCielProza-SemiBold.woff2');
+    font-weight: 700;
+}
+:root {
+    --font-family: iCielIdealSans, sans-serif;
+    --main-light-color: #d4ca9f;
+    --main-text-color: #2d2c2c;
+    --main-site-bakground: #076836;
+    --main-second-site-background: #2c2b2a;
+    --main-border-style: 1px solid #d4ca9f;
+    --main-site-coffee-color: #503629;
+    --main-header-height: 200px;
+    --main-single-color: #ef4136;
+}
+@keyframes textFly {
+    from {
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.214;
+    text-rendering: optimizespeed;
+    color: var(--main-text-color);
+    overflow-y: overlay;
+}
+// Scroll bar Css
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(173, 170, 170, 0.63);
+}
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.4;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+p {
+    color: #fff;
+    font-weight: 600;
+}
+button {
+    margin: auto;
+    border: none;
+}
+.block {
+    padding-top: 30px;
+    position: relative;
+}
+.block1 {
+    display: block;
+    grid-area: block1;
+    color: var(--main-text-color);
+    margin-bottom: 19px;
+}
+.block2 {
+    display: block;
+    grid-area: block2;
+    color: var(--main-text-color);
+}
+.brand-description {
+    font-size: 3.2rem;
+    margin-bottom: 80px;
+    font-weight: 400;
+    color: #fff;
+}
+.intro-video {
+    padding-top: 120px;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 10;
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -2;
+    }
+}
+.video-intro-title {
+    font-size: 4.2rem;
+    font-family: iCielProza;
+}
+.text-fly {
+    animation: textFly 0.4s linear 0.3s forwards;
+}
+.next-btn {
+    display: block;
+    background-color: transparent;
+    width: 45px;
+    height: auto;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+.btn {
+    display: block;
+    background-color: transparent;
+    height: auto;
+    border: none;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+.next-btn-img {
+    display: block;
+}
+.sub-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    color: var(--main-text-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    &::before,
+    &::after {
+        content: '';
+        margin: 0 20px 0 0;
+        border-top: 1px solid var(--main-light-color);
+        flex: 1 0 20px;
+    }
+    &::after {
+        margin: 0 0 0 20px;
+    }
+}
+.center-block {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    display: block;
+}
+.line-gold {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: ' ';
+        width: 25px;
+        height: 1px;
+        display: block;
+        background: var(--main-light-color);
+        margin-right: 12px;
+    }
+}
+.bold-text {
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+.center-text {
+    text-align: center;
+}
+.left-text {
+    text-align: left;
+}
+@media only screen and (max-width: 1024px) {
+    :root {
+        --main-header-height: 100px;
+    }
+    .brand-description {
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .sub-title {
+        font-size: 1.4rem;
+    }
+    .brand-description {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .block1,.block2 {
+        font-size: 1.4rem;
+    }
+}

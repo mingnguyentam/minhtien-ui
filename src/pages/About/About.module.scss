@@ -1,0 +1,351 @@
+.brand-story {
+    padding-bottom: 50px;
+}
+.brand-story-title {
+    padding: 50px 85px 0 250px;
+    text-align: left;
+    font-size: 4.8rem;
+    color: var(--main-site-bakground);
+    font-family: iCielProza, sans-serif;
+    text-transform: uppercase;
+}
+.brand-story-background {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: -17%;
+        margin-bottom: 20px;
+    }
+    &:last-child {
+        width: 100%;
+        height: auto;
+        margin-top: -15%;
+    }
+}
+.brand-story-content {
+    padding: 0 85px 0 250px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    .brand-story-quotes {
+        margin-bottom: 40px;
+        font-size: 2.4rem;
+        font-family: iCielProza, sans-serif;
+        color: var(--main-site-bakground);
+        width: calc(33.3333% - 50px);
+    }
+    .brand-story-info {
+        display: flex;
+        flex-flow: wrap;
+        width: calc(66.6669% - 50px);
+    }
+}
+.meta {
+    width: calc(50% - 10px);
+    h6 {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        color: var(--main-second-site-background);
+        &::before {
+            content: ' ';
+            width: 25px;
+            display: block;
+            background: var(--main-light-color);
+            margin-right: 12px;
+            height: 1px;
+        }
+    }
+    p {
+        margin-bottom: 58px;
+        margin-left: 37px;
+        color: var(--main-text-color);
+    }
+}
+.brand-story-video {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.mask-video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+}
+.mask-text {
+    color: var(--main-light-color);
+    text-transform: uppercase;
+    h2 {
+        font-size: 4rem;
+        margin-bottom: 35px;
+    }
+}
+.play-btn {
+    display: block;
+    background-color: transparent;
+    height: 100%;
+    span {
+        cursor: pointer;
+        display: block;
+        padding-top: 20px;
+        font-size: 1.6rem;
+        color: var(--main-light-color);
+        text-transform: uppercase;
+        font-family: iCielIdealSans;
+        font-weight: 600;
+        line-height: 19px;
+    }
+}
+.journey {
+    padding-top: 30px;
+    background-color: transparent;
+    background-position: 100% 0;
+    background-size: cover;
+    position: relative;
+}
+.journey-text {
+    position: relative;
+    z-index: 5;
+    padding: 120px 70px 275px 250px;
+    text-align: left;
+    .journey-title {
+        margin-bottom: 120px;
+        font-size: 3.2rem;
+        color: var(--main-light-color);
+        text-transform: uppercase;
+        font-family: iCielProza, sans-serif;
+    }
+    .journey-content {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 35px;
+        color: #fff;
+        article {
+            width: calc(33.33333% - 35px);
+            font-weight: 600;
+        }
+    }
+}
+.readmore-link {
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: iCielIdealSans;
+    font-weight: 400;
+}
+.journey-drawing {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 300px;
+    z-index: 1;
+    overflow: visible;
+}
+.brand-history {
+    padding: 65px 375px 140px 0;
+}
+.vision-mission-wrapper {
+    padding: 95px 375px 0 145px;
+}
+.vision-mission-content {
+    display: flex;
+    text-align: left;
+}
+.vision-mission-header {
+    width: 50%;
+    font-size: 40px;
+    font-family: iCielProza, sans-serif;
+    text-transform: uppercase;
+    color: var(--main-site-coffee-color);
+    margin-bottom: 45px;
+}
+.vision-mission-description {
+    width: 50%;
+    h5 {
+        margin-bottom: 15px;
+        font-size: 2.4rem;
+        color: var(--main-site-bakground);
+    }
+    p {
+        color: var(--main-text-color);
+        margin-bottom: 95px;
+    }
+}
+.vision-mission-img {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.core-value {
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h3 {
+        color: #fff;
+    }
+}
+.certification-wrapper {
+    padding: 150px 20% 250px;
+    .certification-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: iCielProza, sans-serif;
+        color: var(--main-site-coffee-color);
+    }
+    p {
+        padding-right: 25%;
+        padding-left: 25%;
+        margin-bottom: 85px;
+        text-align: center;
+        color: var(--main-text-color);
+    }
+}
+.certification-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.certification-logo-item {
+    display: block;
+    margin: 0 20px 20px;
+    height: 110px;
+    width: auto;
+}
+@media only screen and (max-width: 1024px) {
+    .brand-story-title {
+        font-size: 3rem;
+        padding: 0 70px;
+    }
+    .brand-story-content {
+        padding: 0 70px;
+        .brand-story-quotes {
+            width: calc(50% - 23px);
+        }
+        .brand-story-info {
+            display: block;
+            width: calc(50% - 23px);
+        }
+        .meta {
+            width: 100%;
+        }
+    }
+    .mask-text {
+        h2 {
+            font-size: 2.4rem;
+        }
+    }
+    .journey {
+        padding: 90px 100px;
+        margin: auto;
+    }
+    .journey-text {
+        padding: 0;
+        .journey-content {
+            display: block;
+            article {
+                width: 100%;
+            }
+        }
+    }
+    .journey-drawing {
+        right: 20px;
+    }
+    .brand-history {
+        padding: 95px 75px 0 145px;
+    }
+    .vision-mission-wrapper {
+        padding: 95px 75px 0 145px;
+    }
+    .vision-mission-description {
+        width: 70%;
+    }
+    .certification-wrapper {
+        padding: 200px 30px 155px;
+        p {
+            padding: 0;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .brand-story-title {
+        font-size: 2.6rem;
+        padding: 0 20px;
+    }
+    .brand-story-content {
+        flex-direction: column;
+        padding: 0 20px;
+        .brand-story-quotes {
+            width: 100%;
+            font-size: 2rem;
+        }
+        .brand-story-info {
+            width: 100%;
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .brand-story-video {
+        padding: 0;
+    }
+    .journey {
+        padding: 75px 20px 145px;
+    }
+    .journey-title {
+        font-size: 2.4rem;
+    }
+    .brand-history {
+        padding: 65px 20px;
+    }
+    .vision-mission-wrapper {
+        padding: 95px 20px 0;
+    }
+    .vision-mission-content {
+        flex-direction: column;
+    }
+    .vision-mission-description {
+        width: 100%;
+        h5 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    .certification-wrapper {
+        .certification-title {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+    .certification-logo-item {
+        height: 63px;
+        width: auto;
+    }
+}
