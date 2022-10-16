@@ -23,23 +23,28 @@ function SlideProduct() {
     return (
         <>
             <div className={cx('wrapper')}>
-                <div className={cx('product-slide')}>
-                    {ProductData.map((item, index) => (
-                        <div className={cx('product-slide-item', `${index === currentSlide ? 'current' : 'slide'}`)}>
-                            <div className={cx('product-description', 'left-text')}>
-                                <div className={cx('product-name')}>{item.name}</div>
-                                <div className={cx('product-info')}>{item.info}</div>
-                                <Link to="/san-pham" className={cx('readmore-link', 'bold-text', 'line-gold')}>
-                                    {' '}
-                                    ĐẾN TRANG SẢN PHẨM
-                                </Link>
-                            </div>
+                <div className={cx('product-slider')}>
+                    <div className={cx('product-slides')}>
+                        {ProductData.map((item, index) => (
+                            <div
+                                className={cx('product-slides-item',`${currentSlide === index ? 'current' : 'slide'}`)}
+                                style={{ left: `-${index*50}%` }}
+                            >
+                                <div className={cx('product-description', 'left-text')}>
+                                    <div className={cx('product-name')}>{item.name}</div>
+                                    <div className={cx('product-info')}>{item.info}</div>
+                                    <Link to="/san-pham" className={cx('readmore-link', 'bold-text', 'line-gold')}>
+                                        {' '}
+                                        ĐẾN TRANG SẢN PHẨM
+                                    </Link>
+                                </div>
 
-                            <div className={cx('product-img')}>
-                                <img key={index} src={item.url} alt="coffilia rang xay" />
+                                <div className={cx('product-img')}>
+                                    <img key={index} src={item.url} alt="coffilia rang xay" />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
                 <div className={cx('slide-btn')}>
                     <div className={cx(`${currentSlide === 0 ? 'active' : ''}`)} onClick={() => handleShow(0)}>

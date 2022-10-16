@@ -49,7 +49,9 @@ function AreasSlide() {
             </div>
             <div className={cx('areas-info-wrapper')}>
                 {AreasData.map((item, index) => (
-                    <div key={index} className={cx('areas-info')}>
+                    <div key={index} className={cx('areas-info')}
+                    style = {{ left: `-${index*25}%` }}
+                    >
                         <div className={cx('areas-name', `${show === index ? 'faded' : ''}`)}>{item.name}</div>
                         <div className={cx('areas-meta')}>
                             <p className={cx('h6', `${show === index ? 'faded' : ''}`)}>Vị Trí</p>

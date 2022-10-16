@@ -107,10 +107,13 @@
 }
 @media only screen and (max-width: 1024px) {
     .footer-wrapper {
-        padding: 40px 40px;
+        padding: 40px;
     }
 }
 @media only screen and (max-width: 768px) {
+    .footer-wrapper{
+        padding: 20px;
+    }
     .widget-wrapper {
         display: block;
         .logo {

@@ -30,12 +30,12 @@
 }
 .core-value-content {
     position: relative;
+    display: flex;
+    width: 300%;
 }
 .core-value-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 33.33333%;
     opacity: 0;
     transition: all 0.4s linear;
 }
@@ -94,6 +94,10 @@ article {
         }
         ul {
             width: 100%;
+            li {
+                width: 33.3333%;
+                margin-right: 0px;
+            }
         }
     }
     .core-value-media {

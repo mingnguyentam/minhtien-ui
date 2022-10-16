@@ -1,30 +1,49 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './CoreValue.module.scss';
 import images from '../../../assets/images';
 const cx = classNames.bind(styles);
 function CoreValue() {
     const [slide, setSlide] = useState(0);
-    const [heightItem, setHeightItem] = useState(0);
-    const coreValueItem = useRef();
     const handleSlide = (arg) => {
         setSlide(arg);
-    }
-    useEffect(() => {
-        setHeightItem(coreValueItem.current.offsetHeight + 30);
-    })
+    };
     return (
         <div className={cx('core-value-wrapper')}>
             <nav className={cx('core-value-nav')}>
                 <p>Chúng tôi duy trì thương hiệu dựa trên các giá trị cốt lõi</p>
                 <ul>
-                    <li className={cx(`${slide === 0 ? 'active' : ''}`)} onClick={() => {handleSlide(0)}}>Gia Đình</li>
-                    <li className={cx(`${slide === 1 ? 'active' : ''}`)} onClick={() => {handleSlide(1)}}>Đam mê</li>
-                    <li className={cx(`${slide === 2 ? 'active' : ''}`)} onClick={() => {handleSlide(2)}}>Bền vững</li>
+                    <li
+                        className={cx(`${slide === 0 ? 'active' : ''}`)}
+                        onClick={() => {
+                            handleSlide(0);
+                        }}
+                    >
+                        Gia Đình
+                    </li>
+                    <li
+                        className={cx(`${slide === 1 ? 'active' : ''}`)}
+                        onClick={() => {
+                            handleSlide(1);
+                        }}
+                    >
+                        Đam mê
+                    </li>
+                    <li
+                        className={cx(`${slide === 2 ? 'active' : ''}`)}
+                        onClick={() => {
+                            handleSlide(2);
+                        }}
+                    >
+                        Bền vững
+                    </li>
                 </ul>
             </nav>
-            <div className={cx('core-value-content')} style={{ height: `${heightItem}px` }}>
-                <div ref={coreValueItem} className={cx('core-value-item',`${slide === 0 ? 'active' : ''}`)}>
+            <div className={cx('core-value-content')}>
+                <div
+                    className={cx('core-value-item', `${slide === 0 ? 'active' : ''}`)}
+                    style={{ left: `-${slide * 33.33333}%` }}
+                >
                     <div className={cx('core-value-media')}>
                         <div className={cx('core-value-img')}>
                             <img src={images.corevalue1} alt="gia-tri-cot-loi-1" />
@@ -59,7 +78,10 @@ function CoreValue() {
                         </article>
                     </div>
                 </div>
-                <div className={cx('core-value-item',`${slide === 1 ? 'active' : ''}`)}>
+                <div
+                    className={cx('core-value-item', `${slide === 1 ? 'active' : ''}`)}
+                    style={{ left: `-${slide * 33.33333}%` }}
+                >
                     <div className={cx('core-value-media')}>
                         <div className={cx('core-value-img')}>
                             <img src={images.corevalue2} alt="gia-tri-cot-loi-1" />
@@ -95,7 +117,10 @@ function CoreValue() {
                         </article>
                     </div>
                 </div>
-                <div className={cx('core-value-item',`${slide === 2 ? 'active' : ''}`)}>
+                <div
+                    className={cx('core-value-item', `${slide === 2 ? 'active' : ''}`)}
+                    style={{ left: `-${slide * 33.33333}%` }}
+                >
                     <div className={cx('core-value-media')}>
                         <div className={cx('core-value-img')}>
                             <img src={images.corevalue3} alt="gia-tri-cot-loi-1" />

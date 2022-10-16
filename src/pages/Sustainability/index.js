@@ -24,7 +24,6 @@ function Sustainability() {
             setHeight1(drawOffsetTop);
             setHeight2(block2.current.getBoundingClientRect().top + window.pageYOffset);
         }, 500);
-        console.log(block2);
         return () => {
             clearTimeout(timer);
         };

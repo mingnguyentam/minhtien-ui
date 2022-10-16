@@ -32,8 +32,6 @@
 .navbar {
     height: 57px;
     flex: 1;
-    display: flex;
-    justify-content: space-between;
     margin-left: 80px;
     margin-bottom: 10px;
     border-bottom: var(--main-border-style);
@@ -43,23 +41,21 @@
         display: flex;
         flex: 2;
         margin-right: 80px;
+        height: 100%;
         :last-child {
             border-right: none;
         }
     }
     .nav-item {
-        margin-top: 10px;
         border-right: var(--main-border-style);
         width: 100%;
         text-transform: uppercase;
         font-weight: 400;
         color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
-.nav-link {
-    display: block;
-    padding: 6px 0px 0px;
-    text-decoration: none;
 }
 .sub-menu-tablet-list {
     display: none;
@@ -154,17 +150,19 @@
         top: -15px;
         left: 0;
         width: 400px;
+        max-width: 80%;
         background-color: #ffffff;
+        height: calc(100vh + 15px);
         margin: 0;
         padding-top: 100px;
-        height: 100vh;
         transform: translateX(-100%);
         transition: transform linear 0.2s;
         .nav-list {
-            display: block;
+            flex-direction: column;
             padding: 0 20px;
             margin: 0px;
             background-color: #ffffff;
+            overflow-y: auto;
         }
         .nav-item {
             border-right: none;
@@ -173,13 +171,13 @@
             padding: 35px 25px 35px;
             color: var(--main-site-bakground);
             margin: 0;
+            justify-content: flex-start;
         }
     }
     .navbar.active {
         transform: translateX(0);
     }
     .sub-menu-tablet-list {
-        padding-top: 30px;
         li {
             padding: 5px 0px 5px 15px;
         }
@@ -189,5 +187,18 @@
     }
     .sub-menu-wrapper {
         display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .menu-btn {
+        margin-left: 0px;
+    }
+    .navbar {
+        .nav-item {
+            padding: 35px 0;
+        }
+        .nav-list {
+            padding: 0 10px;
+        }
     }
 }

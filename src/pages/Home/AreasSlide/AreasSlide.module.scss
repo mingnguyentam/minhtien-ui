@@ -42,14 +42,13 @@
 }
 .areas-info-wrapper {
     position: relative;
-    width: 100%;
+    width: 400%;
+    display: flex;
+    overflow: hidden;
 }
 .areas-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+    width: 25%;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -109,11 +108,13 @@
 }
 @media only screen and (max-width: 768px) {
     .areas-wrapper {
-        height: 850px;
+        min-height: 850px;
+        height: auto ;
+        padding: 50px 20px 40px;
     }
     .areas-info {
         display: grid;
-        padding: 25px 50px 0;
+        padding: 0;
         text-align: left;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;

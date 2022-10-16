@@ -51,7 +51,8 @@ function Header() {
                 <Link to="/" onClick={() => setShowSubMenuTablet('')}>
                     <img className={cx('logo')} src={images.logo} alt="minh-tien-coffee" />
                 </Link>
-                <nav className={cx('navbar', `${showMenuTablet ? 'active' : ''}`)} ref={menubar}>
+                <nav className={cx('navbar', `${showMenuTablet ? 'active' : ''}`)} ref={menubar}
+                onScroll={() => setShowMenuTablet(true)}>
                     <ul className={cx('nav-list')}>
                         {publicRoutes.map((route, index) => {
                             if (route.title !== 'TRANG CHỦ') {

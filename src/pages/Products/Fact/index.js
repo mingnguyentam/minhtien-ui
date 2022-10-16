@@ -16,17 +16,19 @@ function Fact() {
         };
     }, [fact]);
     return (
-        <TypewriterComponent
-            options={{
-                strings: [...facts],
-                autoStart: true,
-                loop: true,
-                pauseFor: 1000,
-                delay: 15,
-                deleteSpeed: 15,
-                cursor: ''
-              }}
-        />
+       <div className={cx('wrapper')}>
+            <TypewriterComponent
+                options={{
+                    strings: [...facts],
+                    autoStart: true,
+                    loop: true,
+                    pauseFor: 1000,
+                    delay: 15,
+                    deleteSpeed: 15,
+                    cursor: ''
+                  }}
+            />
+       </div>
     );
 }
 
